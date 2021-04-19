@@ -16,3 +16,23 @@ Custom TCP Rule           TCP                30303       Anywhere
 Custom ICMP Rule-IPv4     Echo Reply         N/A         Anywhere
 HTTPS                     TCP                443         Anywhere
 
+And finally click Review and Launch
+On upcoming Key Pair Interface Choose>create a new key pair then name it as you wish and Download Key Pair and save it somewhere safe on your computer.
+
+##Assign an elastic IP address(don't change IP every time you restart the instance)
+
+1.Click Network and Security>Elastic IPs>Allocate IP Address and click Allocate
+2.On the new interface click Associate elastic IP address to your newly created IP an choose your newly created EC2 Instance from before and finally click Associate.
+3. Now you have this IP address as the elastic IP for yourn machine!
+
+##Final Things that you will use later
+1.Your key pair(.pem) file you stored later,
+2.From Instance>Descriptions on your EC2 Dashboard try to save your IPv4 Public IP address which is the elasteic IP Address you created recently.
+
+
+
+
+
+
+
+
