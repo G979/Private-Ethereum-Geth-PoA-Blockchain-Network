@@ -1,0 +1,15 @@
+Install Geth and 
+
+##Connect to the Virtual Machine
+
+-On Instances tab in AWS right--click on instance ID and click Connect.
+*There is no concept of password in this connection. The key pair we saved on creating our VM will act as password
+
+-On the Location(ex. Desktop) when you save your key pair(.pem file), right-click and open Git Bash here to manipulate your connection
+-On the new terminal type -->chmod 400 "your_keypair_name".pem.(You can follow the same procedure using node.js command prompt)
+-In order to log in the VM type -> ssh -i "your_keypair_name" ubuntu@ec2-"your-instance-id"5.eu-west-2.compute.amazonaws.com. You can find this command on your "Connect to your Instance"
+interface that popped up after you clicked Connect,
+-Type yes on the following question and you have connected on your AWS Virtual Machine.
+
+##
+
