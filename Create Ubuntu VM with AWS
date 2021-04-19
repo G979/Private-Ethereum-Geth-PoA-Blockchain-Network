@@ -13,6 +13,7 @@ SSH                       TCP                 22         Anywhere
 HTTP                      TCP                 80         Anywhere
 Custom TCP Rule           TCP                8545        Anywhere
 Custom TCP Rule           TCP                30303       Anywhere
+Custom TCP Rule           TCP                30301       Anywhere
 Custom ICMP Rule-IPv4     Echo Reply         N/A         Anywhere
 HTTPS                     TCP                443         Anywhere
 
