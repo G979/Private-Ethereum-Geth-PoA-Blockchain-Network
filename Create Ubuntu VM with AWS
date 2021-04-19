@@ -1,1 +1,18 @@
+How to create an Ubuntu Virtual Machine with AWS: Step-by-Step Installation process
+
+
+##Initial Settings
+1.Click Services>EC2>Instances>Launch Instance
+2.On Step 1 that follows choose an Ubuntu Server that has Free Tier eligible slot and select your Operating System(x86 or Arm)
+3.On Step 2 choose the t2.micro Type Instance and on Configure Instance Details leave the Settings as they are and finally click Add Storage Button
+4.On Add Storage choose 16GB in Size form element
+
+##Ports you need to open(Step 6 Configure Security Group)
+Type                    Protocol          Port Range      Source
+SSH                       TCP                 22         Anywhere
+HTTP                      TCP                 80         Anywhere
+Custom TCP Rule           TCP                8545        Anywhere
+Custom TCP Rule           TCP                30303       Anywhere
+Custom ICMP Rule-IPv4     Echo Reply         N/A         Anywhere
+HTTPS                     TCP                443         Anywhere
 
