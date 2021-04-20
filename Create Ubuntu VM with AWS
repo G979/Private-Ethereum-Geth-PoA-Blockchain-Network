@@ -28,7 +28,7 @@ On upcoming Key Pair Interface Choose>create a new key pair then name it as you 
 
 ##Final Things that you will use later
 1.Your key pair(.pem) file you stored later,
-2.From Instance>Descriptions on your EC2 Dashboard try to save your IPv4 Public IP address which is the elasteic IP Address you created recently.
+2.From Instance>Descriptions on your EC2 Dashboard try to save your IPv4 Public IP address which is the elastic IP Address you created recently.
 
 
 
