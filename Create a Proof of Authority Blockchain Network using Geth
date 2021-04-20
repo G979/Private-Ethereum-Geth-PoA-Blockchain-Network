@@ -1,5 +1,3 @@
-Install Geth and 
-
 ##Connect to the Virtual Machine
 
 -On Instances tab in AWS right--click on instance ID and click Connect.
@@ -7,9 +5,43 @@ Install Geth and
 
 -On the Location(ex. Desktop) when you save your key pair(.pem file), right-click and open Git Bash here to manipulate your connection
 -On the new terminal type -->chmod 400 "your_keypair_name".pem.(You can follow the same procedure using node.js command prompt)
--In order to log in the VM type -> ssh -i "your_keypair_name" ubuntu@ec2-"your-instance-id"5.eu-west-2.compute.amazonaws.com. You can find this command on your "Connect to your Instance"
-interface that popped up after you clicked Connect,
+-In order to log in the VM type -> ssh -i "your_keypair_name" ubuntu@ec2-"your-instance-id"5.eu-west-2.compute.amazonaws.com. You can find this command on your "Connect to your 
+Instance" interface that popped up after you clicked Connect,
 -Type yes on the following question and you have connected on your AWS Virtual Machine.
 
-##
+##Install Geth
+*When you are connected to the VM follow these commands
+-type --->sudo -s (for root privileges for Windows)
+-type --->sudo add-apt-repository -y ppa:ethereum/ethereum
+-type --->sudo add-apt-update
+-type --->sudo add-apt-get install ethereum
+-Finally type ---> geth to make sure the gate is installed on the VM 
+**If an application is running and creating nodes then it is OK, BUT you have to keep in mind that is a running application and it costs Virtual Memory so you have
+to stop it by pressing Ctrl+C.
+
+##Check if ports are open and the virtual version is working fine
+-Open new terminal and type this --> ping your_elastic_ip_address
+-If it is successfully replying you have a normal connection. If the requset timed out, then you do not have a normal connection and you have to add some ports in the initial
+declaration in AWS. (Add all traffic rule on Inbound Rules and make it available from anywhere, though it is not optimal to keep this port open)
+
+##Create a folder that will be responsible for your Network
+Type the following commands on your root-ip user(-->sudo -s command)
+-cd /opt/      #enter opt fold
+-mkdir your_preffered_directory_name
+-cd your_preffered_directory_name
+-mkdir node0 (a dir act as the first node of the blockchain)
+-cd node0
+-ls-la (and test if there are two nodes on the directory)
+
+##Create ethereum/node account
+Let's create a simple ethereum account by following these steps:
+-type ---> geth --datadir "./data" account new    **ask geth to create new account an store it in the folder named data
+-Your new account is locked with a password. You will be asked to give and repeat a password for your ethereum account. Please store it somewhere safe.
+-You will be handed a public address of the key. Please store it somewhere safe Example: 0x4C2575F59g0n61B45D70707EA7A2aE47aafa37c1. This is the address of your node0.
+*Now if you type -->ls-la <-- you will see a folder called data containing the details of your account. Please don't change anything inside it.
+
+
+
+
+
 
