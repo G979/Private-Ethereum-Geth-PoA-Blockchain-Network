@@ -54,6 +54,14 @@ Let's create a simple ethereum account by following these steps:
   Your genesis.json file is ready
 **Ideally check the genesis.json file from this repository and try chopping all the unnecessary nodes from your file also.
 
+##Initialize genesis.file to the geth
+-On node0 location just type --->geth --datadir ./data init ./your_genesis_file_name.json<--- 
+**If it was successfull, you should see an INFO message that states "Successfully wrote genesis file" Don't worry about the errors!
+
+##Launch network
+-On node0 location just type --->geth --datadir ./data init ./your_genesis_file_name.json<--- 
+-Run the launch.sh file you will find in this repository as one command with a single space between each row.
+
 
 
 
