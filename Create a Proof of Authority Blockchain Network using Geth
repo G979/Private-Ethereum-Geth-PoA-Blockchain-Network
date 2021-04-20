@@ -40,7 +40,19 @@ Let's create a simple ethereum account by following these steps:
 -You will be handed a public address of the key. Please store it somewhere safe Example: 0x4C2575F59g0n61B45D70707EA7A2aE47aafa37c1. This is the address of your node0.
 *Now if you type -->ls-la <-- you will see a folder called data containing the details of your account. Please don't change anything inside it.
 
-
+##Build a genesis.json file using puppeth
+-type -->puppeth<-- on the node0 location and answer the following questions
+  -Please specify name. Type your preferred name(no spaces,hyphen or capital)
+  -What you would like to do. Type 2  (Configure new genesis)
+  --What you would like to do.Type 1  (Create genesis from scratch)
+  ---Consensus engine.Type 2    (Clique-proof of authority)
+  ----How many secs?Type 5    (Any number of your choice actually)
+  -----Which accounts are allowed to seal? Type your_elastic_ip_address   (the one you have saved)
+  ------Which accounts should be pre-funded?   Type your_elastic_ip_address
+  -------pre-compile addresses. Type yes
+  --------Specify the network ID. Type 9999
+  Your genesis.json file is ready
+**Ideally check the genesis.json file from this repository and try chopping all the unnecessary nodes from your file also.
 
 
 
