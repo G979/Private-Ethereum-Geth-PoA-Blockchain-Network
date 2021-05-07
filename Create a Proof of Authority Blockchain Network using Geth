@@ -61,7 +61,10 @@ Let's create a simple ethereum account by following these steps:
 ##Launch network
 -On node0 location just type --->geth --datadir ./data init ./your_genesis_file_name.json<--- 
 -Run the launch.sh file you will find in this repository as one command with a single space between each row.
+-Your network will start mining blocks!
 
+##Connect to JS Console using geth
+-All you have to do is open a new terminal and type ---> geth attach http://your_ip_address:8545
 
 
 
